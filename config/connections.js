@@ -59,7 +59,7 @@ module.exports.connections = {
   someMongodbServer: {
     adapter: 'sails-mongo',
     host: 'localhost',
-    port: 27017,
+    port: 27017
     // user: 'username',
     // password: 'password',
     // database: 'your_mongo_db_name_here'
@@ -80,8 +80,17 @@ module.exports.connections = {
     user: 'YOUR_POSTGRES_USER',
     password: 'YOUR_POSTGRES_PASSWORD',
     database: 'YOUR_POSTGRES_DB'
-  }
+  },
 
+  herokuPostgresqlPlineyWhite: {
+    adapter: 'sails-postgresql',
+    host: 'ec2-50-19-249-214.compute-1.amazonaws.com',
+    port: 5432,
+    ssl: true,
+    user: 'womhnepndbtqmk',
+    password: 'jFkVtizywsvau0GXPF5C6DdyLZ',
+    database: 'd9gi5d5p5teq78'
+  }
 
   /***************************************************************************
   *                                                                          *

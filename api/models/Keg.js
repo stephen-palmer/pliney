@@ -32,7 +32,10 @@ module.exports = {
     },
 
     createdOn: {
-      type: 'datetime'
+      type: 'datetime',
+      defaultsTo: function () {
+        return new Date();
+      }
     },
 
     tappedOn: {
@@ -42,6 +45,30 @@ module.exports = {
     emptiedOn: {
       type: 'datetime'
     }
-  }
+  },
+
+  beforeCreate: refreshDates,
+  beforeUpdate: refreshDates
 };
+
+function refreshDates(values, cb) {
+  switch(values.status) {
+    case 'Conditioning':
+      values.tappedOn = null;
+      values.emptiedOn = null;
+      break;
+    case 'Tapped':
+      values.tappedOn = new Date();
+      values.emptiedOn = null;
+      break;
+    case 'Empty':
+      if(!values.tappedOn) {
+        values.tappedOn = new Date();
+      }
+      values.emptiedOn = new Date();
+      break;
+  }
+
+  cb();
+}
 

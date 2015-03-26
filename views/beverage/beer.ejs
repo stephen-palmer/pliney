@@ -1,0 +1,12 @@
+<div>
+  <h2 class="beverage_name"><%= tap.keg.contents.name %></h2>
+  <% if(tap.keg.contents.description) { %>
+  <%= tap.keg.contents.description %>
+  <% } %>
+  <ul>
+    <li>OG: <%= tap.keg.contents.og %></li>
+    <li>FG: <%= tap.keg.contents.fg %></li>
+    <li>ABV: <%= tap.keg.contents.abv %>%</li>
+    <li>IBU: <%= tap.keg.contents.ibu %></li>
+  </ul>
+</div>

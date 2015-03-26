@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'CrayonCrumble';
+  src: url('/fonts/dk-crayon-crumble.ttf');
+}
+
+body {
+  background-image: url('/images/chalkboard.jpg');
+  font-family: 'CrayonCrumble';
+  font-size: x-large;
+  color: whitesmoke;
+
+}
+
+ul.tap_list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.tap_list_item {
+  border-bottom: 1px solid #ccc;
+}
+
+li.tap_list_item:last-child {
+  border: none;
+}
+

@@ -8,17 +8,22 @@ body {
   font-family: 'CrayonCrumble';
   font-size: x-large;
   color: whitesmoke;
+  padding: 0;
+}
 
+div.board_body {
+  padding-left: 15px;
 }
 
 ul.tap_list {
   list-style-type: none;
-  margin: 0;
   padding: 0;
 }
 
 li.tap_list_item {
   border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 li.tap_list_item:last-child {

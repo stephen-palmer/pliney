@@ -28,7 +28,13 @@ module.exports = {
           })
             .populate("contents")
             .then(function(results) {
+              results = results.map(function(keg) {
+                keg.contents.srmHex = Beverage.srmHex(keg.contents.srm);
+                return keg;
+              });
+
               return _.indexBy(results, 'id');
+
             });
 
           return [board, tapKegs];

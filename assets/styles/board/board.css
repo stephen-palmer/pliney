@@ -3,10 +3,23 @@
   src: url('/fonts/dk-crayon-crumble.ttf');
 }
 
+@font-face {
+  font-family: 'SketchSerif';
+  src: url('/fonts/sketch-serif.svg#SketchSerif') format("svg");
+}
+
+@font-face {
+  font-family: 'KraftNine';
+  src: url('/fonts/kraft-nine.ttf');
+}
+
+
 body {
-  background-image: url('/images/chalkboard.jpg');
-  font-family: 'CrayonCrumble';
-  font-size: x-large;
+  background-image: url('/images/chalkboard.png');
+  background-size: 100%;
+  font-family: 'SketchSerif', serif;
+  font-weight:normal;
+  font-size: 50px;
   color: whitesmoke;
   padding: 0;
 }
@@ -21,12 +34,16 @@ ul.tap_list {
 }
 
 li.tap_list_item {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 15px;
-  padding-top: 15px;
+  background-image: url('/images/chalk-div.png');
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: bottom;
+  background-size: 100%;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 li.tap_list_item:last-child {
-  border: none;
+  background-image: none;
 }
 

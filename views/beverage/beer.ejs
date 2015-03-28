@@ -1,15 +1,20 @@
-<div>
-  <h2 class="beverage_name"><%= tap.keg.contents.name %></h2>
-  <% if(tap.keg.contents.description) { %>
-  <%= tap.keg.contents.description %>
-  <% } %>
-  <ul>
-    <li>OG: <%= tap.keg.contents.og %></li>
-    <li>FG: <%= tap.keg.contents.fg %></li>
-    <li>ABV: <%= tap.keg.contents.abv %>%</li>
-    <li>IBU: <%= tap.keg.contents.ibu %></li>
-  </ul>
+<div class="beverage_block">
+  <div>
+    <h2 class="beverage_name"><%= tap.keg.contents.name %></h2>
+    <% if(tap.keg.contents.description) { %>
+    <%= tap.keg.contents.description %>
+    <% } %>
+  </div>
+  <div style="float: left; background-color: <%= tap.keg.contents.srmHex %>;" class="pint_glass">
+    <div class="mask"></div>
+  </div>
+  <div style="float: left;">
+    <ul>
+      <li>OG: <%= tap.keg.contents.og %></li>
+      <li>FG: <%= tap.keg.contents.fg %></li>
+      <li>ABV: <%= tap.keg.contents.abv %>%</li>
+      <li>IBU: <%= tap.keg.contents.ibu %></li>
+    </ul>
+  </div>
 </div>
-<div class="pint_glass">
-  <div class="mask"/>
-</div>
+
